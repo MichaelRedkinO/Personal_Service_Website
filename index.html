@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michael R. | Websites and AI tools for small businesses in Ireland</title>
+<meta name="description" content="Michael (Mykhailo) R., a software development student in Ireland. Fast websites, local SEO audits and AI enquiry assistants for small businesses.">
+<meta property="og:title" content="Michael R. | Websites and AI tools for small businesses in Ireland">
+<meta property="og:description" content="Fast websites, local SEO audits and AI enquiry assistants. Build a quote in 30 seconds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top">Michael R.</a>
+  <nav aria-label="Main">
+    <a class="hide-sm" href="#work">Work</a>
+    <a class="hide-sm" href="#process">Process</a>
+    <a class="hide-sm" href="#availability">Availability</a>
+    <a href="#contact">Contact</a>
+    <button id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
+  </nav>
+</div></header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <div class="status"><span class="dot" id="dot" aria-hidden="true"></span><span id="status-text">Open for new projects</span></div>
+      <h1>A website that makes it easy for customers to call you.</h1>
+      <p class="lead">I’m Michael (Mykhailo), a software development student in Ireland. I build fast, clear websites and simple AI assistants for small businesses, and I explain everything in plain English.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Send an enquiry</a>
+        <a class="btn" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="quote">
+      <h2>Build your quote</h2>
+      <p class="note">Tick what you need. Prices are starting points, and I confirm the final price before any work begins.</p>
+      <div id="opts"></div>
+      <div class="total"><span>Estimated total</span><output id="total" for="opts">€0</output></div>
+      <a class="btn primary" href="#contact">Send this quote</a>
+    </div>
+  </div>
+
+  <section id="work">
+    <h2>Work in progress</h2>
+    <p class="lead">I’m early in my career, so I show what I’m building and what isn’t finished yet.</p>
+    <article class="card">
+      <h3>AI note assistant</h3>
+      <p>A small assistant that sits in a window beside your browser. Highlight a line on any page, such as a Wikipedia article, and it saves the line and files it into organised notes.</p>
+      <span class="tag wip">In progress</span><span class="tag">AI</span><span class="tag">Notes</span>
+      <p class="note" style="margin-top:.8rem"><a href="https://github.com/MichaelRedkinO" rel="noopener">See the code on GitHub</a></p>
+    </article>
+    <h3 style="margin-top:3rem">What an upgrade looks like</h3>
+    <p class="lead">Drag the bar to compare.</p>
+    <div class="ba" id="ba">
+      <div class="layer after"><b>Murphy &amp; Sons Plumbing</b><span>Fast call-outs across the county. Free quote in 24 hours.</span><i>Call for a free quote</i></div>
+      <div class="layer before"><b>WELCOME TO OUR WEBSITE!!!</b><span>Murphy &amp; Sons Plumbing, since 1998</span><small>Click here to contact us | Our services | Page 2</small></div>
+      <span class="lab l">Before</span><span class="lab r">After</span>
+      <div class="bar"></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Compare the old website with the improved website">
+    </div>
+    <p class="note" style="margin-top:.7rem">Made-up business, shown as an example. It is not a real client.</p>
+  </section>
+
+  <section id="process">
+    <h2>How a project works</h2>
+    <ol class="steps">
+      <li><b>You tell me what’s wrong</b><span>A short message about your business and what you want customers to do.</span></li>
+      <li><b>I send a fixed price</b><span>Written, with what’s included and when it will be ready. No surprises.</span></li>
+      <li><b>I build, you review</b><span>You see it before it goes live and ask for changes until you’re happy.</span></li>
+    </ol>
+    <h3 style="margin-top:3rem">Common questions</h3>
+    <details><summary>Do I pay before work starts?</summary><p>We agree the price in writing first. Payment terms are confirmed in the quote, so you know exactly what to expect.</p></details>
+    <details><summary>Will I be able to edit the site myself?</summary><p>Yes, if you want that. I can set it up so you change text and photos without touching code, or I can handle updates for you.</p></details>
+    <details><summary>What is an AI enquiry assistant?</summary><p>A chat box on your site that answers common questions, like opening hours and prices, and passes real enquiries to you by email.</p></details>
+    <details><summary>Why work with a student?</summary><p>I’m building my portfolio, so I take on a limited number of projects and give each one proper attention. I also explain things clearly instead of using jargon.</p></details>
+  </section>
+
+  <section id="availability">
+    <h2>Availability</h2>
+    <p class="lead">This calendar updates live, so you can see when I can start.</p>
+    <p class="msg" id="cal-msg" role="status"></p>
+    <div class="months" id="months"></div>
+    <div class="legend">
+      <span><i style="background:var(--open)"></i>Open</span>
+      <span><i style="background:var(--busy)"></i>Busy, small work only</span>
+      <span><i style="background:var(--full)"></i>Fully booked</span>
+      <span><i style="background:var(--away)"></i>Away</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Send an enquiry</h2>
+    <p class="lead">Tell me about your business and what isn’t working. I reply within one working day.</p>
+    <form id="form">
+      <label>Your name<input type="text" id="f-name" required autocomplete="name"></label>
+      <label>Business name<input type="text" id="f-biz" autocomplete="organization"></label>
+      <label>Your email<input type="email" id="f-email" required autocomplete="email"></label>
+      <label>What would you like help with?<textarea id="f-msg" rows="4" required></textarea></label>
+      <button class="btn primary" type="submit">Open in my email app</button>
+      <p class="msg" id="toast" role="status"></p>
+    </form>
+    <p class="note">This opens a ready-written email, so nothing is sent until you press send.</p>
+    <p class="mail">Or email me directly: <a id="mail" href="#"></a></p>
+    <div class="btns">
+      <button class="btn" type="button" id="copy">Copy email address</button>
+      <a class="btn" href="https://www.linkedin.com/in/michael-redkin-342b213b6" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/MichaelRedkinO" rel="noopener">GitHub</a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Michael (Mykhailo) R. Based in Ireland.</div></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
