@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Availability editor</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%85%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap" style="padding-top:2rem;padding-bottom:3rem">
+  <h1 style="font-size:2rem">Availability editor</h1>
+
+  <form id="login" class="hidden">
+    <p class="lead">Sign in to change the calendar on your website.</p>
+    <label>Email<input type="email" id="email" required autocomplete="username"></label>
+    <label>Password<input type="password" id="pass" required autocomplete="current-password"></label>
+    <button class="btn primary" type="submit">Sign in</button>
+    <p class="msg" id="login-msg" role="alert"></p>
+  </form>
+
+  <div id="panel" class="hidden">
+    <p class="lead">Pick a status, then tap days to paint them. Changes appear on the website straight away.</p>
+    <div class="brush" id="brush">
+      <button type="button" data-s="open" style="--c:var(--open)" aria-pressed="true">Free</button>
+      <button type="button" data-s="busy" style="--c:var(--busy)" aria-pressed="false">Busy</button>
+      <button type="button" data-s="full" style="--c:var(--full)" aria-pressed="false">Booked</button>
+      <button type="button" data-s="away" style="--c:var(--away)" aria-pressed="false">Away</button>
+    </div>
+    <p class="msg" id="save-msg" role="status"></p>
+    <div class="months" id="months"></div>
+    <p class="note" style="margin-top:2rem">Your user ID (needed once for the database rules): <code id="uid"></code></p>
+    <button class="btn" type="button" id="out">Sign out</button>
+  </div>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
