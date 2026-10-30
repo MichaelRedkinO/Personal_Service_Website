@@ -4,7 +4,7 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 import { renderCalendar, todayKey } from "./calendar.js";
 
 /* EDIT HERE: your email and prices */
-const EMAIL = "YOUR_ACTUAL_EMAIL@example.com";
+const EMAIL = "michaelredkin08@gmail.com";
 const SERVICES = [
   {id: "site", name: "Fast website", desc: "Clear, mobile-friendly, easy to contact.", price: 400, time: "1-2 weeks"},
   {id: "seo", name: "Local SEO audit", desc: "Why nearby customers can’t find you, and the fix.", price: 150, time: "3-5 days"},
