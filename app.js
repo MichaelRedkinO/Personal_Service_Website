@@ -4,12 +4,12 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 import { renderCalendar, todayKey } from "./calendar.js";
 
 /* EDIT HERE: your email and prices */
-const EMAIL = "michaelredkinservices.com";
+const EMAIL = "YOUR_ACTUAL_EMAIL@example.com";
 const SERVICES = [
   {id: "site", name: "Fast website", desc: "Clear, mobile-friendly, easy to contact.", price: 400, time: "1-2 weeks"},
   {id: "seo", name: "Local SEO audit", desc: "Why nearby customers can’t find you, and the fix.", price: 150, time: "3-5 days"},
   {id: "ai", name: "AI enquiry assistant", desc: "Answers common questions, passes enquiries to you.", price: 300, time: "1 week"},
-  {id: "custom", name: "Custom request", desc: "Have a specific idea? Let's discuss a solution.", price: 0, time: "TBD"}
+  {id: "custom", name: "Custom request", desc: "Have a specific idea? Let's discuss a custom solution.", price: 0, time: "TBD"}
 ];
 
 const $ = id => document.getElementById(id);
@@ -21,11 +21,15 @@ SERVICES.forEach(s => opts.insertAdjacentHTML("beforeend",
   `<label class="opt">
     <input type="checkbox" value="${s.id}">
     <span>
-      <b>${s.name} <small style="color:var(--accent)">(${s.time})</small></b>
+      <b>${s.name} <small style="color:var(--accent); font-weight:400">(${s.time})</small></b>
       <small>${s.desc}</small>
     </span>
     <span class="pr">${s.price > 0 ? 'from ' + eur(s.price) : 'Discuss'}</span>
   </label>`));
+
+const picked = () => SERVICES.filter(s => opts.querySelector(`input[value="${s.id}"]`).checked);
+const update = () => { $("total").textContent = eur(picked().reduce((a, s) => a + s.price, 0)); };
+opts.addEventListener("change", update); update();
 
 /* live availability from Firebase (read only) */
 const months = $("months");
